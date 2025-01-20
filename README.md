@@ -1,5 +1,7 @@
 # React + Vite
 
+Este es un proyecto llamado ALURA FLIX en el marco de la formacion de ALURA LATAM. LA RESPONSIVIDAD Y ESTILOS ESTAN HECHOS CON TAILWIND.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
