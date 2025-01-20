@@ -13,6 +13,16 @@ const AddPlace = ({setArgentinaPlaces, argentinaPlaces, setBrasilPlaces, brasilP
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+/*************  ✨ Codeium Command ⭐  *************/
+  /**
+   * Handles the form submission to add a new place. Prevents the default form
+   * submission behavior, creates a new place object with the form data and a
+   * unique id, adds the new place to the appropriate state array, and navigates
+   * back to the home page.
+   * @param {Event} e - The form submission event.
+   */
+
+/******  44a952ae-eefe-4d5d-8a07-6c70102213f8  *******/
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -39,6 +49,8 @@ const AddPlace = ({setArgentinaPlaces, argentinaPlaces, setBrasilPlaces, brasilP
       description: '',
     });
   };
+
+  const isFormValid = Object.values(formData).every(value => value.trim() !== '');
 
   return (
     <div className="min-h-screen bg-[#b4ceda] flex flex-col justify-center items-center">
@@ -93,7 +105,8 @@ const AddPlace = ({setArgentinaPlaces, argentinaPlaces, setBrasilPlaces, brasilP
         />
 
         <div className='flex gap-[50px] lg:gap-[80px]'>
-        <button type="submit" className="bg-red-950 text-white pr-[5px] pl-[5px] rounded-[7px] border-solid border-white border-[2px] lg:text-[25px]">
+        <button type="submit" className={`pr-[5px] pl-[5px] rounded-[7px] border-solid border-white border-[2px] lg:text-[25px] 
+              ${isFormValid ? 'bg-red-950 text-white' : 'bg-gray-400 text-gray-600 cursor-not-allowed'}`}>
           Agregar
         </button>
         <button onClick={handleResetForm} type="reset" className="bg-red-950 text-white pr-[5px] pl-[5px] rounded-[7px] border-solid border-white border-[2px] lg:text-[25px]">
